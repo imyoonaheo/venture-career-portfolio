@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 840" width="1440" height="840" role="img" aria-labelledby="title desc">
+<title id="title">Voice Transcriber-first meeting workflow</title>
+<desc id="desc">회의 음성 업로드 후 Voice Transcriber가 먼저 전사하고, 회의록과 후속 할 일을 별도의 Slack 채널에 게시합니다. DOCX 문서화는 별도 흐름이며 Slack 파일 첨부 오류 시 텍스트로 대체합니다.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FFFFFF"/><stop offset="1" stop-color="#F5F8FC"/></linearGradient>
+<linearGradient id="blue" x1="0" x2="1"><stop stop-color="#1B4DD7"/><stop offset="1" stop-color="#3677F5"/></linearGradient>
+<filter id="shadow" x="-10%" y="-20%" width="125%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="10" flood-color="#12305B" flood-opacity=".07"/></filter>
+<marker id="arrow" markerWidth="9" markerHeight="9" refX="7.6" refY="4.5" orient="auto"><path d="M0 0L9 4.5L0 9Z" fill="#8195B0"/></marker>
+</defs>
+<style>
+text {font-family:"Pretendard","Noto Sans CJK KR","Noto Sans KR","Apple SD Gothic Neo",sans-serif}
+.eyebrow{font-size:18px;font-weight:700;letter-spacing:2px;fill:#2D6DE7}
+.h1{font-size:39px;font-weight:800;fill:#15253B}
+.sub{font-size:19px;fill:#607188}
+.hnum{font-size:18px;font-weight:800;fill:#2364DF}
+.h{font-size:25px;font-weight:750;fill:#15253B}
+.p{font-size:19px;fill:#607188}
+.section{font-size:22px;font-weight:800;fill:#243A57}
+.small{font-size:17px;fill:#63738A}
+.note{font-size:17px;fill:#6B798B}
+</style>
+<rect width="1440" height="840" fill="url(#bg)"/>
+<text class="eyebrow" x="64" y="62">03 / MEETING AUTOMATION</text>
+<text class="h1" x="64" y="119">회의 음성에서 후속 업무까지</text>
+<text class="sub" x="64" y="153">Voice Transcriber가 전사를 먼저 수행한 뒤 회의록과 할 일을 Slack 채널별로 전달합니다.</text>
+<rect x="1127" y="45" width="250" height="36" rx="18" fill="#EAF2FF"/>
+<text x="1252" y="69" text-anchor="middle" font-size="15" font-weight="700" fill="#2359AE" font-family="sans-serif">DEMO · 가상 데이터 개념도</text>
+<path d="M64 184H1376" stroke="#DFE6EF" stroke-width="2"/>
+<!-- main step cards -->
+<rect x="64" y="225" width="398" height="170" rx="18" fill="#FFFFFF" stroke="#E1E9F3" filter="url(#shadow)"/>
+<circle cx="105" cy="267" r="22" fill="#EBF2FF"/><text x="105" y="274" text-anchor="middle" class="hnum">01</text>
+<text class="h" x="94" y="318">회의 음성 파일 등록</text>
+<text class="p" x="94" y="353">Slack에 녹음 파일 업로드</text>
+<path d="M472 311H503" stroke="#8195B0" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="521" y="225" width="398" height="170" rx="18" fill="#FFFFFF" stroke="#E1E9F3" filter="url(#shadow)"/>
+<circle cx="562" cy="267" r="22" fill="#EBF2FF"/><text x="562" y="274" text-anchor="middle" class="hnum">02</text>
+<text class="h" x="551" y="318">Voice Transcriber 전사</text>
+<text class="p" x="551" y="353">음성 → 텍스트 변환</text>
+<path d="M929 311H960" stroke="#8195B0" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="978" y="225" width="398" height="170" rx="18" fill="#FFFFFF" stroke="#C8DAFA" filter="url(#shadow)"/>
+<circle cx="1019" cy="267" r="22" fill="#E7F2FF"/><text x="1019" y="274" text-anchor="middle" class="hnum">03</text>
+<text class="h" x="1008" y="318">요약·후속 할 일 추출</text>
+<text class="p" x="1008" y="353">전사 내용 분석 및 용도별 분류</text>
+<!-- path to channel split -->
+<text class="section" x="64" y="465">목적에 따라 Slack 채널에 나누어 게시</text>
+<path d="M1177 395V492H372V507 M1177 492H1068V507" fill="none" stroke="#8195B0" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="64" y="517" width="626" height="139" rx="18" fill="#EFF7F4" stroke="#CBE8DB"/>
+<rect x="89" y="545" width="52" height="52" rx="13" fill="#CFE9DC"/>
+<path d="M101 562H129M101 572H123M101 582H118" stroke="#12684F" stroke-width="3" stroke-linecap="round"/>
+<text class="h" x="164" y="562">회의록용 Slack 채널</text>
+<text class="p" x="164" y="601">회의 요약 · 주요 논의사항</text>
+<text class="small" x="164" y="631">자동 게시 확인</text>
+<rect x="750" y="517" width="626" height="139" rx="18" fill="#EDF4FF" stroke="#CDDEFA"/>
+<rect x="775" y="545" width="52" height="52" rx="13" fill="#D4E5FC"/>
+<path d="M787 561L793 567L805 553 M787 578L793 584L805 570" fill="none" stroke="#215DAD" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<text class="h" x="850" y="562">업무관리용 Slack 채널</text>
+<text class="p" x="850" y="601">후속 할 일 · 담당 업무 · 기한</text>
+<text class="small" x="850" y="631">자동 게시 확인</text>
+<!-- separate workflow -->
+<rect x="64" y="689" width="1312" height="94" rx="16" fill="#F6F8FC" stroke="#BFCBDD" stroke-width="2" stroke-dasharray="9 7"/>
+<text x="92" y="725" class="section">별도 DOCX 문서화 흐름</text>
+<text x="92" y="754" font-size="19" fill="#526981" font-family="sans-serif">정리된 회의 내용 → JSON 구조화 → Word(DOCX) 생성 → Slack 첨부 시도</text>
+<rect x="1003" y="707" width="340" height="42" rx="21" fill="#FFF0EA"/>
+<text x="1173" y="734" text-anchor="middle" font-size="16" font-weight="700" fill="#AD573B" font-family="sans-serif">첨부 권한 오류 시 텍스트 대체 게시</text>
+<text x="64" y="814" class="note">개념 흐름도 · 실제 Slack 화면이나 원본 회사 데이터가 아닌 익명화한 설명 이미지입니다.</text>
+</svg>
