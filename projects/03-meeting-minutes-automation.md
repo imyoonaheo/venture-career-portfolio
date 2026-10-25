@@ -8,6 +8,10 @@
 
 ## Workflow — Voice Transcriber 우선 전사 후 채널별 분류·게시
 
+![Voice Transcriber-first automation workflow — fictional data](../assets/meeting-automation-workflow.svg)
+
+*가상 데이터로 작성한 개념 이미지입니다. 실제 Slack 화면이나 DOCX 파일 첨부 성공 화면이 아닙니다.*
+
 ```mermaid
 flowchart TD
     A["Slack에 회의 음성 파일 업로드"] --> B["Voice Transcriber가 음성을 텍스트로 전사"]
