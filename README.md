@@ -13,7 +13,7 @@
 
 ## 대표 사례 · 회의 음성에서 후속 업무까지
 
-<a href="projects/03-meeting-minutes-automation.md"><img src="assets/meeting-automation-example.png" alt="가상 데이터로 재구성한 회의 음성 전사, 업무 분류, Word 회의록의 설명용 시각화" width="740"></a>
+<a href="projects/03-meeting-minutes-automation.md"><img src="assets/meeting-automation-portfolio.jpg" alt="가상 데이터로 재구성한 회의 음성 전사, 업무 분류, Word 회의록의 설명용 시각화" width="740"></a>
 
 > **설명용 이미지:** 실제 Slack 화면이나 운영 성과 캡처가 아닙니다. 이미지의 Word 파일 공유 장면은 구현 흐름을 보여주기 위한 예시입니다. 확인된 실제 Slack 화면에서는 파일 업로드 권한 오류로 DOCX 첨부가 실패했고, 회의록 텍스트가 대체 게시됐습니다. [구현 범위와 확인 근거 보기](projects/03-meeting-minutes-automation.md)
 
