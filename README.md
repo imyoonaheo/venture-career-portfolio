@@ -14,6 +14,7 @@
 | **[01 · Venture Operations ERP](projects/01-venture-operations-erp.md)** | 기업·미팅·투자연계·후속업무 정보의 분산 | 데이터 구조 설계, 기업 중심 관리 화면 및 워크플로 구현 |
 | **[02 · AI Operations Automation](projects/02-ai-operations-automation.md)** | 반복 점검, 보고 및 후속 업무 누락 | AI 회의 요약, 할 일 연결, 일일 점검·주간 보고 로직 |
 | **[03 · Meeting Minutes Automation](projects/03-meeting-minutes-automation.md)** | 회의록 문서 작성 및 Slack 공유의 반복 작업 | JSON 기반 DOCX 생성, Slack 봇 게시·파일 첨부 흐름 |
+| **[04 · Seminar Landing Pages](projects/04-seminar-landing-pages.md)** | 세미나 신청 접수·안내 메일의 수작업 | 단일 HTML 랜딩페이지 3종, Apps Script·Sheets 기반 접수·메일 자동화 |
 
 ## Approach
 
@@ -26,6 +27,7 @@
 - **Web & Database:** Next.js, React, TypeScript, Supabase, SQL
 - **AI & Workflow:** Google Gemini, 업무 모니터링·보고 루틴
 - **Documents & Integration:** Python, JSON, OOXML/DOCX, Bash, Slack Web API
+- **Web Publishing:** HTML/CSS/JavaScript, Google Apps Script, Google Sheets, Vercel
 
 ## Scope & Accuracy
 
