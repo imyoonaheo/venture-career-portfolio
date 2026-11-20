@@ -1,38 +1,43 @@
 # Venture Operations & AI Automation Portfolio
-### Yoona Heo | 허유나
+### 허유나 · Yoona Heo
 
-**ERP Development · AI-assisted Operations · Document Automation**
+초기기업 액셀러레이팅 업무에서 기업 정보, 회의 기록, 후속 업무가 흩어져 생기는 누락을 줄이기 위해 **업무 흐름을 설계하고 시스템과 자동화로 구현한 경험**을 정리했습니다. 아래 이미지는 기능을 이해하기 위한 **가상 데이터 기반 설명용 시각화**입니다.
 
-초기기업 액셀러레이팅 실무에서 반복적으로 발생하는 기업정보 조회, 미팅 기록, 후속 업무 관리와 보고 과정을 어떻게 시스템화할 수 있을지 고민했습니다. 이 저장소는 하임벤처투자에서 수행한 **업무 자동화와 내부 시스템 설계·개발 경험**을 설명하는 개인 기술 포트폴리오입니다.
+## 한눈에 보기
 
-원본 회사 소스코드나 실제 기업 데이터는 포함하지 않습니다. 프로젝트의 주요 기능은 원본 구현 파일을 확인한 범위에서 작성했고, **구현된 기능과 운영 중인 기능을 구분**했습니다.
+| 프로젝트 | 해결하려던 문제 | 제가 한 일 | 자세히 보기 |
+|---|---|---|---|
+| **Venture Operations ERP** | 기업·미팅·투자 연계 정보를 한곳에서 보기 어려움 | 기업 중심 정보 구조와 관리 화면, 업무 흐름 설계·구현 | [프로젝트 01](projects/01-venture-operations-erp.md) |
+| **AI Operations Automation** | 요청·결정·할 일의 후속 점검과 보고가 반복됨 | 기록을 요약·분류하고 일일 점검 및 보고에 연결하는 로직 설계·구현 | [프로젝트 02](projects/02-ai-operations-automation.md) |
+| **Meeting Minutes Automation** | 음성 기록을 회의록과 후속 업무로 옮기는 과정에서 누락 발생 | 음성 전사 결과의 채널별 전달과 별도 Word 문서화 흐름 구현 | [프로젝트 03](projects/03-meeting-minutes-automation.md) |
 
-## Projects
+## 대표 사례 · 회의 음성에서 후속 업무까지
 
-| 프로젝트 | 해결하려는 문제 | 작업 내용 |
-|---|---|---|
-| **[01 · Venture Operations ERP](projects/01-venture-operations-erp.md)** | 기업·미팅·투자연계·후속업무 정보의 분산 | 데이터 구조 설계, 기업 중심 관리 화면 및 워크플로 구현 |
-| **[02 · AI Operations Automation](projects/02-ai-operations-automation.md)** | 반복 점검, 보고 및 후속 업무 누락 | AI 회의 요약, 할 일 연결, 일일 점검·주간 보고 로직 |
-| **[03 · Meeting Minutes Automation](projects/03-meeting-minutes-automation.md)** | 회의록 문서 작성 및 Slack 공유의 반복 작업 | JSON 기반 DOCX 생성, Slack 봇 게시·파일 첨부 흐름 |
+<a href="projects/03-meeting-minutes-automation.md"><img src="assets/meeting-automation-example.png" alt="가상 데이터로 재구성한 회의 음성 전사, 업무 분류, Word 회의록의 설명용 시각화" width="740"></a>
 
-## Approach
+> **설명용 이미지:** 실제 Slack 화면이나 운영 성과 캡처가 아닙니다. 이미지의 Word 파일 공유 장면은 구현 흐름을 보여주기 위한 예시입니다. 확인된 실제 Slack 화면에서는 파일 업로드 권한 오류로 DOCX 첨부가 실패했고, 회의록 텍스트가 대체 게시됐습니다. [구현 범위와 확인 근거 보기](projects/03-meeting-minutes-automation.md)
 
-**실무 문제 발견 → 정보·업무 구조화 → 기능 구현 → 반복 개선**
+Voice Transcriber가 Slack의 음성을 먼저 전사하고, 회의 내용과 할 일을 분류해 해당 채널에 전달합니다. 별도의 문서화 구성요소가 구조화된 내용을 Word 회의록으로 생성합니다.
 
-업무의 효율을 높이기 위해서는 단순히 자동화 도구를 추가하기보다, 어떤 정보가 언제 누구에게 필요한지 먼저 정리해야 한다고 생각했습니다. 기업별 활동 기록이 다음 행동으로 이어지도록 데이터와 사용자 화면을 연결하고, 반복적인 문서·보고 업무를 자동화하는 방향으로 프로젝트를 진행했습니다.
+<details>
+<summary>자동화 흐름도 보기</summary>
 
-## Technology
+![회의 음성 전사, 채널별 게시와 별도 Word 문서화 흐름](assets/meeting-automation-workflow.svg)
+
+</details>
+
+## 일하는 방식
+
+**실무 문제 발견 → 정보와 업무 구조화 → 기능 구현 → 반복 개선**
+
+기업별 활동 기록이 다음 행동으로 이어지도록 필요한 정보와 사용자를 먼저 정의했습니다. 투자 판단은 담당자가 수행하고, 시스템은 기록·공유·점검을 돕는 역할로 설계했습니다.
+
+## 사용 기술과 공개 범위
 
 - **Web & Database:** Next.js, React, TypeScript, Supabase, SQL
 - **AI & Workflow:** Google Gemini, 업무 모니터링·보고 루틴
 - **Documents & Integration:** Python, JSON, OOXML/DOCX, Bash, Slack Web API
 
-## Scope & Accuracy
+이 저장소는 개인의 업무 설계·개발 경험을 설명합니다. 회사 원본 코드, 실제 기업·투자자료, 회의록, 개인정보 및 인증정보는 포함하지 않습니다. 일부 투자 딜 화면에는 목업 데이터가 있고, 모든 기능의 실제 운영 여부나 시간 절감 수치는 검증하지 않았습니다. 일일 점검·주간 보고 기능과 계획 단계 기능도 [프로젝트별 문서](projects/02-ai-operations-automation.md)에서 구분했습니다.
 
-- ERP의 대표 구현 파일과 회의록 자동화 관련 실제 소스 및 예제 실행을 확인했습니다.
-- AI 직원 설정상 일일 점검·주간 보고는 `active`, 음성 기반 기록·시스템 개선 역할은 `planned`로 구분되어 있습니다.
-- 일부 투자 딜 관련 화면에는 목업 데이터가 존재하며, 실제 투자 집행을 자동화했다고 주장하지 않습니다.
-- 프로젝트별 실제 가동률, 업무시간 절감 효과 및 전체 코드 기여도는 별도 검증하지 않았습니다.
-- 실제 회의록, 투자자료, 개인정보, API 키, 원본 회사 코드 및 내부 운영 문서는 포함하지 않습니다.
-
-[LinkedIn](https://www.linkedin.com/in/imyoonaheo/)
+[공개 전 확인 항목](PUBLICATION_CHECKLIST.md) · [LinkedIn](https://www.linkedin.com/in/imyoonaheo/)
